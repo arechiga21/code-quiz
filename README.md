@@ -1,4 +1,4 @@
-# Code Qiz
+# Code Quiz
 
 ## Purpose
 A quiz to test your knowledge on coding
