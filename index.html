@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Code Quiz</title>
+</head>
+<body>
+    <div class="content">
+    <!-- start of start screen -->
+    <div class="start" id="start-screen">
+        <h1>Coding Quiz</h1>
+        <p>
+            Try to answer the following questions within the time. If you answer incorrectly you will lose 10 seconds. The amount of time you have left when you are done will be your score.
+        </p>
+        <button id="start-quiz" onclick="startQuiz()">Start Quiz</button>
+    </div>
+    <!-- end of start screen -->
+
+    <!-- highscore and time left -->
+    <div class="highscores"><a href="highscores.html">highscores</a></div>
+
+    <div class="timer">Time: <span id="time-left"></span></div>
+
+    <!-- Question section start -->
+    <div class="hide" id="all-questions">
+        <h2 id="question"></h2>
+        <div class="options" id="options"></div>
+    </div>
+    <!-- question section end -->
+
+    <!-- start of end screen -->
+    <div class="hide" id="end-screen">
+        <h2>You have finished</h2>
+        <p>Yor final score is <span id="score"></span>.</p>
+        <p>Enter initials: <input type="text" id="initials">
+        <form action="highscores.html">
+            <button id="submit" onclick="submitScore()">Submit Score</button>
+        </form>
+    </p>
+    </div>
+
+    <!-- end of end screen -->
+    <div id="result" class="hide"></div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
