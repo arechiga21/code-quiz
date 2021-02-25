@@ -54,7 +54,7 @@ function startQuiz() {
 
 function allQuestions() {
 
-  var currentQuestion = questionsEl[currentIndex];
+  var currentQuestion = questions[currentIndex];
 
 
   var titleEl = document.getElementById("question");
@@ -82,7 +82,7 @@ function allQuestions() {
 
 function answerClick() {
 
-  if (this.value !== questionsEl[currentIndex].answer) {
+  if (this.value !== questions[currentIndex].answer) {
 
     time -= 15;
 
@@ -101,14 +101,14 @@ function answerClick() {
 
   resultsEl.setAttribute("class", "result");
   setTimeout(function() {
-    resultsEl.setAttribute("class", "hide");
+    resultsEl.setAttribute("class", "result hide");
   }, 1000);
 
 
   currentIndex++;
 
 
-  if (currentIndex === questionsEl.length) {
+  if (currentIndex === questions.length) {
     endQuiz();
   } else {
     allQuestions();
